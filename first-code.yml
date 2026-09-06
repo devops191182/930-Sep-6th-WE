@@ -1,0 +1,7 @@
+---
+ -name: ec2 creating
+ -hosts: localhost
+  task:
+    -name: ubuntu
+    -status: present
+
