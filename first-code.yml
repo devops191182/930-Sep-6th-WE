@@ -2,7 +2,7 @@
  -name: ec2 creating
  -hosts: localhost
   task:
-    -name: ubuntu
+    -name: nginx
     -status: present
     -service: started
 
