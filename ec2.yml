@@ -22,5 +22,5 @@ Resources:
         - !Ref MySecurityGroup
       Tags:
         - Key: Name
-          Value: first-srv
+          Value: croma-srv
 
