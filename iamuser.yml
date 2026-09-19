@@ -14,5 +14,6 @@ Resources:
               - Effect: 'Allow'
                 Action:
                   - 's3:ListBucket'
+                  - 's3:DeleteObject'
                   - 's3:ListAllMyBuckets'
                 Resource: '*'
