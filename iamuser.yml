@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: new iam user
+
+Resources:
+  MyIAMUser:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: 'Garima-HCL'
+      Policies:
+        - PolicyName: 's3-new-policy'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: 'Allow'
+                Action:
+                  - 's3:PutObject'
+                  - 's3:GetObject'
+                  - 's3:ListBucket'
+                  - 's3:ListAllMyBuckets'
+                Resource: '*'
