@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: creating ec2 
+
+Resources:
+  MysecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ssh port
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t3.micro
+      ImageId: ami-01a00762f46d584a1
+      KeyName: 12pm-sep-pass
+      SecurityGroupIds:
+        - !Ref MysecurityGroup
+      Tags:
+        - Key: Name
+          Value: first-cicd
+
